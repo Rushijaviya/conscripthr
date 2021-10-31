@@ -1,0 +1,74 @@
+<head>
+	<link rel="icon" type="image/png" href="../static/assets1/images/icons/favicon.ico"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+	<title>Student Data </title>
+	</head>
+	
+	
+	<div class="container">
+		<div class="row">
+			
+			
+			<div class="col-md-12">
+			<h1>Student Data</h1>
+			<div class="table-responsive">
+	
+					
+				  <table id="mytable" class="table table-bordred table-striped">
+					   
+					   <thead>
+						<th>Student Name</th>                   
+						 <th>College Name</th>
+						 <th>Specialization</th>
+						 <th>Degree Name</th>
+						 <th>Email</th>
+						 <th>Internship</th>
+						 <th>Phone Number</th>
+						 <th>Location</th>
+						 <th>Gender</th>						 
+					   </thead>
+		<tbody>
+	
+			
+			{% for d in data %}
+			<tr>
+	
+				<td>{{d.studentname}}</td>
+				<td>{{d.Collegename}}</td>
+				<td>{{d.Specialization}}</td>
+				<td>{{d.Degreename}}</td>
+				<td>{{d.email}}</td>
+				<td>{{d.Internship}}</td>
+				<td>{{d.PhoneNumber}}</td>
+				<td>{{d.Location}}</td>
+				<td>{{d.Gender}}</td>
+			
+				</tr>
+			{% endfor  %}
+		
+		
+	 
+		
+		
+	
+		
+	   
+		
+	   
+		
+		</tbody>
+			
+	</table>
+	
+	<a class="btn btn-primary" href="{% url 'index' %}" role="button">Home</a>
+	
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
