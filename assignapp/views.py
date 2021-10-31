@@ -2,7 +2,6 @@ from django.shortcuts import redirect, render
 from .models import studentInfo, userInfo
 from .forms import Userform,UserInfoform,StudentInfoForm
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def signup_user(request):
@@ -65,13 +64,13 @@ def index(request):
 def after_login(request):
     return render(request,'after_login.html')
 
-@login_required(login_url="login")
+
 def user_table(request):
     data=userInfo.objects.all()
     context={"data":data}
     return render(request,'user_table.html',context)
 
-@login_required(login_url="login")
+
 def student_table(request):
     data=studentInfo.objects.all()
     context={"data":data}
