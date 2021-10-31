@@ -83,5 +83,5 @@ def admin(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         if username=='admin' and password=='password':
-             return redirect('/after_login/')
+             return render(request,'after_login.html')
     return render(request,'admin_login.html')
