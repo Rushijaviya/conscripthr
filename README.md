@@ -3,7 +3,7 @@ Assignment
 
 This is Test Assignment submission for Python Internship with Conscript HR 
 
-Deployment
+Deployment of Website
 --------
 
 https://conscripthr.herokuapp.com/
